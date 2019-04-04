@@ -1,11 +1,16 @@
 {
     "name": "@simonwep/sassyfication",
     "version": "0.0.1",
-    "description": "Sassy mixins to shorten your css",
-    "author": "Simon Reinisch",
     "license": "MIT",
-    "main": "src/index.scss",
+    "author": "Simon Reinisch <toports@gmx.de>",
+    "description": "Sassy mixins to shorten your css",
+    "main": "./src/index.scss",
     "keywords": ["SASS", "SCSS", "CSS", "Styles", "Utils"],
+    "homepage": "https://github.com/Simonwep/sassyfication",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Simonwep/sassyfication.git"
+    },
     "dependencies": {},
     "devDependencies": {}
 }

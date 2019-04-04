@@ -1,0 +1,27 @@
+// Small devices (landscape phones, 576px and up)
+@mixin MQPhones {
+    @media (min-width: 576px) {
+        @content
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin MQTablets {
+    @media (min-width: 768px) {
+        @content
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin MQDesktop {
+    @media (min-width: 992px) {
+        @content
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin MQLargeDesktop {
+    @media (min-width: 1200px) {
+        @content
+    }
+}

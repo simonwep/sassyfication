@@ -1,0 +1,11 @@
+{
+    "name": "@simonwep/sassyfication",
+    "version": "0.0.1",
+    "description": "Sassy mixins to shorten your css",
+    "author": "Simon Reinisch",
+    "license": "MIT",
+    "main": "src/index.scss",
+    "keywords": ["SASS", "SCSS", "CSS", "Styles", "Utils"],
+    "dependencies": {},
+    "devDependencies": {}
+}

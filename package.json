@@ -1,6 +1,6 @@
 {
-    "name": "@simonwep/sassyfication",
-    "version": "0.0.2",
+    "name": "sassyfication",
+    "version": "0.0.1",
     "license": "MIT",
     "author": "Simon Reinisch <toports@gmx.de>",
     "description": "Sassy mixins to shorten your css",

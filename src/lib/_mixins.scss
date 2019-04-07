@@ -13,12 +13,12 @@
     @include applyProperties($args, top, right, bottom, left)
 }
 
-// height(height, min-width, max-width)
+// width(height, min-width, max-width)
 @mixin width($args...) {
     @include applyProperties($args, width, min-width, max-width);
 }
 
-// fixed-height(width)
+// fixed-width(width)
 @mixin fixed-width($base) {
     @include width($base, $base, $base);
 }
@@ -60,16 +60,16 @@
     @include applyProperties($args, stroke, stroke-width, stroke-linecap, stroke-dasharray, stroke-dashoffset);
 }
 
-// flex(flex-direction, align-items, justify-content, flex-base);
+// flex(flex-direction, align-items, justify-content);
 @mixin flex($args...) {
     display: flex;
-    @include applyProperties($args, flex-direction, align-items, justify-content, flex-base)
+    @include applyProperties($args, flex-direction, align-items, justify-content)
 }
 
-// inline-flex(flex-direction, align-items, justify-content, flex-base);
+// inline-flex(flex-direction, align-items, justify-content);
 @mixin inline-flex($args...) {
     display: inline-flex;
-    @include applyProperties($args, flex-direction, align-items, justify-content, flex-base)
+    @include applyProperties($args, flex-direction, align-items, justify-content)
 }
 
 // animate(props) {timeline}

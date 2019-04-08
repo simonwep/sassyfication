@@ -7,7 +7,7 @@
 <br>
 <p align="center">
    <a href="https://www.npmjs.com/package/sassyfication">
-       <img alt="Current version" src="https://img.shields.io/badge/version-0.0.1-536dc6.svg?style=popout-square">
+       <img alt="Current version" src="https://img.shields.io/badge/version-0.0.2-536dc6.svg?style=popout-square">
    </a>
    <a href="https://www.npmjs.com/package/sassyfication">
        <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/sassyfication.svg?style=popout-square&color=C6538C">
@@ -37,6 +37,7 @@ $ yarn add sassyfication
 @mixin position($top, $right, $bottom, $left) // One-liner for left, right, bottom, left
 @mixin pseudo($position: absolute, $content: '') // Mostly used group in pseudo-elements
 @mixin font($font-weight, $font-size, $letter-spacing) // One-liner for font styling
+@mixin whiteSpaceOverflow(white-space: nowrap, overflow: hidden, text-overflow: ellipsis) // One-liner for text related overflow
 @mixin stroke($stroke, $stroke-width, $stroke-linecap, $stroke-dasharray, $stroke-dashoffset) // One-liner for SVG styles
 @mixin flex($flex-direction, $align-items, $justify-content) // One-liner for basic flex initialization
 @mixin inline-flex($flex-direction, $align-items, $justify-content) // One-liner for basic inline-flex initialization

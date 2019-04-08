@@ -50,9 +50,14 @@
     @include applyProperties(($position, $content), position, content)
 }
 
-// font(weight, size, spacing)
+// font(font-weight, font-size, letter-spacing)
 @mixin font($args...) {
     @include applyProperties($args, font-weight, font-size, letter-spacing);
+}
+
+// whiteSpaceOverflow(white-space: nowrap, overflow: hidden, text-overflow: ellipsis)
+@mixin whiteSpaceOverflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) {
+    @include applyProperties(($white-space, $overflow, $text-overflow), white-space, overflow, text-overflow);
 }
 
 // stroke(stroke, stroke-width, stroke-linecap, stroke-dasharray, stroke-dashoffset)

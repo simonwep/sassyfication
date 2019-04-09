@@ -1,4 +1,4 @@
-@mixin applyProperties($args, $props...) {
+@mixin _apply-props($args, $props...) {
     @for $i from 1 through length($args) {
         $val: nth($args, $i);
 
@@ -10,12 +10,12 @@
 
 // position: position(top, right, bottom, left)
 @mixin position($args...) {
-    @include applyProperties($args, top, right, bottom, left)
+    @include _apply-props($args, top, right, bottom, left)
 }
 
 // width(height, min-width, max-width)
 @mixin width($args...) {
-    @include applyProperties($args, width, min-width, max-width);
+    @include _apply-props($args, width, min-width, max-width);
 }
 
 // fixed-width(width)
@@ -25,7 +25,7 @@
 
 // height(height, min-height, max-height)
 @mixin height($args...) {
-    @include applyProperties($args, height, min-height, max-height);
+    @include _apply-props($args, height, min-height, max-height);
 }
 
 // fixed-height(height)
@@ -34,52 +34,52 @@
 }
 
 // size(width: auto, height: width)
-@mixin size($width: auto, $height: $width) {
-    width: $width;
+@mixin size($height: auto, $width: $height) {
     height: $height;
+    width: $width;
 }
 
 // fixed-height(width: auto, height: width)
-@mixin fixed-size($width: auto, $height: $width) {
+@mixin fixed-size($height: auto, $width: $height) {
     @include fixed-height($height);
     @include fixed-width($height);
 }
 
 // pseudo(position: absolute, content: '')
 @mixin pseudo($position: absolute, $content: '', $position...) {
-    @include applyProperties(($position, $content), position, content)
+    @include _apply-props(($position, $content), position, content)
 }
 
 // font(font-weight, font-size, letter-spacing)
 @mixin font($args...) {
-    @include applyProperties($args, font-weight, font-size, letter-spacing);
+    @include _apply-props($args, font-weight, font-size, letter-spacing);
 }
 
 // whiteSpaceOverflow(white-space: nowrap, overflow: hidden, text-overflow: ellipsis)
-@mixin whiteSpaceOverflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) {
-    @include applyProperties(($white-space, $overflow, $text-overflow), white-space, overflow, text-overflow);
+@mixin white-space-overflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) {
+    @include _apply-props(($white-space, $overflow, $text-overflow), white-space, overflow, text-overflow);
 }
 
 // stroke(stroke, stroke-width, stroke-linecap, stroke-dasharray, stroke-dashoffset)
 @mixin stroke($args...) {
-    @include applyProperties($args, stroke, stroke-width, stroke-linecap, stroke-dasharray, stroke-dashoffset);
+    @include _apply-props($args, stroke, stroke-width, stroke-linecap, stroke-dasharray, stroke-dashoffset);
 }
 
 // flex(flex-direction, align-items, justify-content);
 @mixin flex($args...) {
+    @include _apply-props($args, flex-direction, align-items, justify-content);
     display: flex;
-    @include applyProperties($args, flex-direction, align-items, justify-content)
 }
 
 // inline-flex(flex-direction, align-items, justify-content);
 @mixin inline-flex($args...) {
+    @include _apply-props($args, flex-direction, align-items, justify-content);
     display: inline-flex;
-    @include applyProperties($args, flex-direction, align-items, justify-content)
 }
 
 // animate(props) {timeline}
 @mixin animate($props: '') {
-    $animation-name: 'a'+ random(100000);
+    $animation-name: 'a' + random(100000);
 
     @keyframes #{$animation-name} {
         @content
@@ -89,7 +89,7 @@
 }
 
 // Sequential animation delay based on childcount and a multiplier
-@mixin sequentialAnimationDelay($child-count, $multiplier) {
+@mixin sequential-animation-delay($child-count, $multiplier) {
     @for $i from 0 through $child-count {
         &:nth-child(#{$i}) {
             animation-delay: #{($i - 1) * $multiplier};
@@ -99,13 +99,13 @@
 
 // Order items easier
 @mixin order($list) {
-    @if type_of($list) == map {
+    @if type-of($list) == map {
         @each $selector, $order in $list {
             #{$selector} {
                 order: $order;
             }
         }
-    } @else if type_of($list) == list {
+    } @else if type-of($list) == list {
         @for $i from 1 through length($list) {
             #{nth($list, $i)} {
                 order: $i;

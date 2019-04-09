@@ -5,12 +5,23 @@
     "author": "Simon Reinisch <toports@gmx.de>",
     "description": "Sassy mixins to shorten your css",
     "main": "./src/index.scss",
-    "keywords": ["SASS", "SCSS", "CSS", "Styles", "Utils"],
     "homepage": "https://github.com/Simonwep/sassyfication",
+    "keywords": [
+        "SASS",
+        "SCSS",
+        "CSS",
+        "Styles",
+        "Utils"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/Simonwep/sassyfication.git"
     },
+    "scripts": {
+        "lint": "sass-lint -v"
+    },
     "dependencies": {},
-    "devDependencies": {}
+    "devDependencies": {
+        "sass-lint": "^1.12.1"
+    }
 }

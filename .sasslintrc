@@ -1,0 +1,13 @@
+{
+    "files": {
+        "include": "./src/**/*.scss"
+    },
+    "rules": {
+        "indentation": [
+            4,
+            {
+                "size": 4
+            }
+        ]
+    }
+}

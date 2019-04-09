@@ -103,7 +103,7 @@ One-liner for text related overflow handling.
 ```scss
 // Example
 .element {
-    @include whiteSpaceOverflow();
+    @include white-space-overflow();
 }
 
 // CSS Output
@@ -201,7 +201,7 @@ Useful to animate a specific amount of childrens successive.
 ```scss
 // Example
 .element {
-    @include sequentialAnimationDelay(3, 200ms);
+    @include sequential-animation-delay(3, 200ms);
 }
 
 // CSS Output
@@ -242,7 +242,7 @@ Receives a list with selectors and order-index for flex elements. Accepts a list
 ```
 
 // Width and height
-#### size($width: auto, $height: width) 
+#### size($height: auto, $width: $height) 
 One-liner for width and height.
 ```scss
 // Example
@@ -252,8 +252,8 @@ One-liner for width and height.
 
 // CSS Output
 .element {
-    width: 20px;
-    height: 30px;
+    height: 20px;
+    width: 30px;
 }
 ```
 #### width($width, $min-width, $max-width) 
@@ -316,7 +316,7 @@ Applies the same value to max, min-height and height.
     max-height: 10px;
 }
 ```
-#### fixed-size($width: auto, $height: width) 
+#### fixed-size($height: auto, $width: $height) 
 One-liner for fixed-width and fixed-height.
 ```scss
 // Example
@@ -326,18 +326,18 @@ One-liner for fixed-width and fixed-height.
 
 // CSS Output
 .element {
-    width: 20px;
-    min-width: 20px;
-    max-width: 20px;
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
 }
 ```
 
 ### Breakpoints
 ```scss
-@include MQPhones {} // Small devices (landscape phones, 576px and up)
-@include MQTablets {} // Medium devices (tablets, 768px and up)
-@include MQDesktop {} // Large devices (desktops, 992px and up)
-@include MQLargeDesktop {} // Extra large devices (large desktops, 1200px and up)
+@include mq-phones {} // Small devices (landscape phones, 576px and up)
+@include mq-tablets {} // Medium devices (tablets, 768px and up)
+@include mq-desktop {} // Large devices (desktops, 992px and up)
+@include mq-large-desktop {} // Extra large devices (large desktops, 1200px and up)

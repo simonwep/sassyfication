@@ -30,35 +30,314 @@ Install via yarn:
 $ yarn add sassyfication
 ```
 
-### Utils
-```scss
+### Utilities
+1. [position](#positiontop-right-bottom-left)
+2. [pseudo](#pseudoposition-absolute-content-)
+3. [font](#fontfont-weight-font-size-letter-spacing)
+4. [whiteSpaceOverflow](#whitespaceoverflowwhite-space-nowrap-overflow-hidden-text-overflow-ellipsis)
+5. [stroke](#strokestroke-stroke-width-stroke-linecap-stroke-dasharray-stroke-dashoffset)
+6. [flex](#flexflex-direction-align-items-justify-content)
+7. [inline-flex](#inline-flexflex-direction-align-items-justify-content)
+8. [animate](#animateprops)
+9. [sequentialAnimationDelay](#sequentialanimationdelaychild-count-multiplier)
+10. [order](#orderlist)
+11. [size](#sizewidth-auto-height-width)
+12. [width](#widthwidth-min-width-max-width)
+13. [height](#heightheight-min-height-max-height)
+14. [fixed-width](#fixed-widthwidth)
+15. [fixed-height](#fixed-heightheight)
+16. [fixed-size](#fixed-sizewidth-auto-height-width)
 
-// General
-@mixin position($top, $right, $bottom, $left) // One-liner for left, right, bottom, left
-@mixin pseudo($position: absolute, $content: '') // Mostly used group in pseudo-elements
-@mixin font($font-weight, $font-size, $letter-spacing) // One-liner for font styling
-@mixin whiteSpaceOverflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) // One-liner for text related overflow
-@mixin stroke($stroke, $stroke-width, $stroke-linecap, $stroke-dasharray, $stroke-dashoffset) // One-liner for SVG styles
-@mixin flex($flex-direction, $align-items, $justify-content) // One-liner for basic flex initialization
-@mixin inline-flex($flex-direction, $align-items, $justify-content) // One-liner for basic inline-flex initialization
-@mixin animate($props) // Props are used for the animation property, @content as keyframes
-@mixin sequentialAnimationDelay($child-count, $multiplier) // Useful to animate a specific amount of childrens in sequence
-@mixin order($list) // Receives a list with selectors and order-index for flex elements. 
+There are also [breakpoints](#breakpoints), adapted from bootstrap.
+
+#### position($top, $right, $bottom, $left)
+Shorthand for `top`, `right`, `bottom`, `left` props.
+```scss
+// Example
+.element { 
+    @include position(10px, 20px, 30px, 40px);
+}
+
+// CSS Output
+.element {
+    top: 10px;
+    right: 20px;
+    bottom: 30px;
+    left: 40px;
+}
+```
+
+#### pseudo($position: absolute, $content: '') 
+Simplifies pseudo-element initialization.
+```scss
+// Example
+.element {
+    @include pseudo();
+}
+
+// CSS Output
+.element {
+   position: absolute;
+   content: '';
+}
+```
+
+#### font($font-weight, $font-size, $letter-spacing) 
+One-liner for font styling.
+```scss
+// Example
+.element {
+    @include font(600, 1.2em, 0.05em);
+}
+
+// CSS Output
+.element {
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+}
+```
+
+#### whiteSpaceOverflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) 
+One-liner for text related overflow handling.
+```scss
+// Example
+.element {
+    @include whiteSpaceOverflow();
+}
+
+// CSS Output
+.element {
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+```
+
+#### stroke($stroke, $stroke-width, $stroke-linecap, $stroke-dasharray, $stroke-dashoffset) 
+One-liner for SVG stroke styles.
+```scss
+// Example
+.element {
+    @include stroke(red, 2px, round, 123, 150);
+}
+
+// CSS Output
+.element {
+    stroke: red;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-dasharray: 123;
+    stroke-dashoffset: 150;
+}
+```
+
+#### flex($flex-direction, $align-items, $justify-content) 
+One-liner for flex container.
+```scss
+// Example
+.element {
+    @include flex(column, center, flex-start);
+}
+
+// CSS Output
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+```
+#### inline-flex($flex-direction, $align-items, $justify-content) 
+One-liner for inline-flex container.
+```scss
+// Example
+.element {
+    @include inline-flex(column, center, flex-start);
+}
+
+// CSS Output
+.element {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+```
+
+#### animate($props) 
+Props are used for the animation property, @content as keyframes. Generates a random id which is used as name.
+```scss
+// Example
+.element {
+    @include animate('1s ease-in-out forwards') {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+// CSS Output
+@keyframes [random-id] {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.element {
+   animation: [random-id] 1s ease-in-out forwards;
+}
+```
+
+#### sequentialAnimationDelay($child-count, $multiplier) 
+Useful to animate a specific amount of childrens successive.
+```scss
+// Example
+.element {
+    @include sequentialAnimationDelay(3, 200ms);
+}
+
+// CSS Output
+.element:nth-child(0) {
+   animation-delay: 0ms;
+}
+
+.element:nth-child(1) {
+   animation-delay: 200ms;
+}
+
+.element:nth-child(2) {
+   animation-delay: 400ms;
+}
+```
+
+#### order($list) 
+Receives a list with selectors and order-index for flex elements. Accepts a list or map with indecies.
+```scss
+// Example
+.element {
+    @include order(('.a', '.b', '.c'));
+}
+
+// CSS Output
+.element .a {
+   order: 1;
+}
+
+.element .b {
+   order: 2;
+}
+
+.element .c {
+   order: 3;
+}
+
+```
 
 // Width and height
-@mixin size($width: auto, $height: width) // One-liner for width and height
-@mixin width($width, $min-width, $max-width) // One-liner for max-, min- width (and width)
-@mixin height($height, $min-height, $max-height) // One-liner for max-, min- height (and height)
-@mixin fixed-width($width) // Applies the same value to max, min-width and width
-@mixin fixed-height($height) // Applies the same value to max, min-height and height
-@mixin fixed-size($width: auto, $height: width) // One-liner for fixed-width and fixed-height
+#### size($width: auto, $height: width) 
+One-liner for width and height.
+```scss
+// Example
+.element {
+    @include size(20px, 30px);
+}
+
+// CSS Output
+.element {
+    width: 20px;
+    height: 30px;
+}
+```
+#### width($width, $min-width, $max-width) 
+One-liner for max-, min- width (and width).
+```scss
+// Example
+.element {
+    @include width(10px, 5px, 20px);
+}
+
+// CSS Output
+.element {
+    width: 10px;
+    min-width: 5px;
+    max-width: 20px;
+}
+```
+#### height($height, $min-height, $max-height) 
+One-liner for max-, min- height (and height).
+```scss
+// Example
+.element {
+    @include height(10px, 5px, 20px);
+}
+
+// CSS Output
+.element {
+    height: 10px;
+    min-height: 5px;
+    max-height: 20px;
+}
+```
+#### fixed-width($width) 
+Applies the same value to max, min-width and width.
+```scss
+// Example
+.element {
+    @include fixed-width(10px);
+}
+
+// CSS Output
+.element {
+    width: 10px;
+    min-width: 10px;
+    max-width: 10px;
+}
+```
+#### fixed-height($height) 
+Applies the same value to max, min-height and height.
+```scss
+// Example
+.element {
+    @include fixed-height(10px);
+}
+
+// CSS Output
+.element {
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+}
+```
+#### fixed-size($width: auto, $height: width) 
+One-liner for fixed-width and fixed-height.
+```scss
+// Example
+.element {
+    @include fixed-size(20px, 40px);
+}
+
+// CSS Output
+.element {
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+}
 ```
 
 ### Breakpoints
 ```scss
-@mixin MQPhones {} // Small devices (landscape phones, 576px and up)
-@mixin MQTablets {} // Medium devices (tablets, 768px and up)
-@mixin MQDesktop {} // Large devices (desktops, 992px and up)
-@mixin MQLargeDesktop {} // Extra large devices (large desktops, 1200px and up)
-```
-
+@include MQPhones {} // Small devices (landscape phones, 576px and up)
+@include MQTablets {} // Medium devices (tablets, 768px and up)
+@include MQDesktop {} // Large devices (desktops, 992px and up)
+@include MQLargeDesktop {} // Extra large devices (large desktops, 1200px and up)

@@ -7,7 +7,7 @@
 <br>
 <p align="center">
    <a href="https://www.npmjs.com/package/sassyfication">
-       <img alt="Current version" src="https://img.shields.io/badge/version-0.0.2-536dc6.svg?style=popout-square">
+       <img alt="Current version" src="https://img.shields.io/badge/version-0.1.0-536dc6.svg?style=popout-square">
    </a>
    <a href="https://www.npmjs.com/package/sassyfication">
        <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/sassyfication.svg?style=popout-square&color=C6538C">
@@ -34,12 +34,12 @@ $ yarn add sassyfication
 1. [position](#positiontop-right-bottom-left)
 2. [pseudo](#pseudoposition-absolute-content-)
 3. [font](#fontfont-weight-font-size-letter-spacing)
-4. [whiteSpaceOverflow](#whitespaceoverflowwhite-space-nowrap-overflow-hidden-text-overflow-ellipsis)
+4. [white-space-overflow](#whitespaceoverflowwhite-space-nowrap-overflow-hidden-text-overflow-ellipsis)
 5. [stroke](#strokestroke-stroke-width-stroke-linecap-stroke-dasharray-stroke-dashoffset)
 6. [flex](#flexflex-direction-align-items-justify-content)
 7. [inline-flex](#inline-flexflex-direction-align-items-justify-content)
 8. [animate](#animateprops)
-9. [sequentialAnimationDelay](#sequentialanimationdelaychild-count-multiplier)
+9. [sequential-animation-delay](#sequentialanimationdelaychild-count-multiplier)
 10. [order](#orderlist)
 11. [size](#sizewidth-auto-height-width)
 12. [width](#widthwidth-min-width-max-width)
@@ -98,7 +98,7 @@ One-liner for font styling.
 }
 ```
 
-#### whiteSpaceOverflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) 
+#### white-space-overflow($white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) 
 One-liner for text related overflow handling.
 ```scss
 // Example
@@ -196,7 +196,7 @@ Props are used for the animation property, @content as keyframes. Generates a ra
 }
 ```
 
-#### sequentialAnimationDelay($child-count, $multiplier) 
+#### sequential-animation-delay($child-count, $multiplier) 
 Useful to animate a specific amount of childrens successive.
 ```scss
 // Example

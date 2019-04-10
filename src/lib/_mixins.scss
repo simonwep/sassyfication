@@ -65,15 +65,15 @@
     @include _apply-props($args, stroke, stroke-width, stroke-linecap, stroke-dasharray, stroke-dashoffset);
 }
 
-// flex(flex-direction, align-items, justify-content);
+// flex(flex-direction, align-items, justify-content, flex-wrap);
 @mixin flex($args...) {
-    @include _apply-props($args, flex-direction, align-items, justify-content);
+    @include _apply-props($args, flex-direction, align-items, justify-content, flex-wrap);
     display: flex;
 }
 
-// inline-flex(flex-direction, align-items, justify-content);
+// inline-flex(flex-direction, align-items, justify-content, flex-wrap);
 @mixin inline-flex($args...) {
-    @include _apply-props($args, flex-direction, align-items, justify-content);
+    @include _apply-props($args, flex-direction, align-items, justify-content, flex-wrap);
     display: inline-flex;
 }
 

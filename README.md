@@ -132,12 +132,12 @@ One-liner for SVG stroke styles.
 }
 ```
 
-#### flex($flex-direction, $align-items, $justify-content) 
+#### flex($flex-direction, $align-items, $justify-content, $flex-wrap) 
 One-liner for flex container.
 ```scss
 // Example
 .element {
-    @include flex(column, center, flex-start);
+    @include flex(column, center, flex-start, wrap);
 }
 
 // CSS Output
@@ -146,15 +146,16 @@ One-liner for flex container.
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 ```
-#### inline-flex($flex-direction, $align-items, $justify-content) 
+#### inline-flex($flex-direction, $align-items, $justify-content, $flex-wrap) 
 One-liner for inline-flex container.
 ```scss
 // Example
 .element {
-    @include inline-flex(column, center, flex-start);
+    @include inline-flex(column, center, flex-start, wrap);
 }
 
 // CSS Output
@@ -163,6 +164,7 @@ One-liner for inline-flex container.
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 ```
 

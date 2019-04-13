@@ -18,6 +18,8 @@
 </p>
 <br>
 
+Sassyfication is a SASS library with mixins which merge frequently combined css attributes into one.
+
 ### Setup
 
 Install via npm:

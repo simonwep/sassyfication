@@ -40,15 +40,16 @@ $ yarn add sassyfication
 5. [stroke](#strokestroke-stroke-width-stroke-linecap-stroke-dasharray-stroke-dashoffset)
 6. [flex](#flexflex-direction-align-items-justify-content)
 7. [inline-flex](#inline-flexflex-direction-align-items-justify-content)
-8. [animate](#animateprops)
-9. [sequential-animation-delay](#sequentialanimationdelaychild-count-multiplier)
-10. [order](#orderlist)
-11. [size](#sizewidth-auto-height-width)
-12. [width](#widthwidth-min-width-max-width)
-13. [height](#heightheight-min-height-max-height)
-14. [fixed-width](#fixed-widthwidth)
-15. [fixed-height](#fixed-heightheight)
-16. [fixed-size](#fixed-sizewidth-auto-height-width)
+8. [flex-self](#flex-selfalign-self-center-justify-self-align-self)
+9. [animate](#animateprops)
+10. [sequential-animation-delay](#sequentialanimationdelaychild-count-multiplier)
+11. [order](#orderlist)
+12. [size](#sizewidth-auto-height-width)
+13. [width](#widthwidth-min-width-max-width)
+14. [height](#heightheight-min-height-max-height)
+15. [fixed-width](#fixed-widthwidth)
+16. [fixed-height](#fixed-heightheight)
+17. [fixed-size](#fixed-sizewidth-auto-height-width)
 
 There are also [breakpoints](#breakpoints), adapted from bootstrap.
 
@@ -167,6 +168,21 @@ One-liner for inline-flex container.
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+}
+```
+
+#### flex-self($align-self: center, $justify-self: $align-self) 
+One-liner for flex-items position.
+```scss
+// Example
+.element {
+    @include flex-self(flex-start, flex-end);
+}
+
+// CSS Output
+.element {
+    align-self: flex-start;
+    justify-self: flex-end;
 }
 ```
 

@@ -77,6 +77,11 @@
     display: inline-flex;
 }
 
+// flex-self(align-self, justify-self)
+@mixin flex-self($align-self: center, $justify-self: $align-self) {
+    @include _apply-props(($align-self, $justify-self), align-self, justify-self);
+}
+
 // animate(props) {timeline}
 @mixin animate($props: '') {
     $animation-name: 'a' + random(100000);

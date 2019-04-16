@@ -7,7 +7,7 @@
 <br>
 <p align="center">
    <a href="https://www.npmjs.com/package/sassyfication">
-       <img alt="Current version" src="https://img.shields.io/badge/version-0.1.0-536dc6.svg?style=popout-square">
+       <img alt="Current version" src="https://img.shields.io/badge/version-0.1.1-536dc6.svg?style=popout-square">
    </a>
    <a href="https://www.npmjs.com/package/sassyfication">
        <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/sassyfication.svg?style=popout-square&color=C6538C">

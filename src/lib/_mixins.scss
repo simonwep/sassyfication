@@ -39,6 +39,18 @@
     width: $width;
 }
 
+// min-size(width: auto, height: width)
+@mixin min-size($height: auto, $width: $height) {
+    min-height: $height;
+    min-width: $width;
+}
+
+// max-size(width: auto, height: width)
+@mixin max-size($height: auto, $width: $height) {
+    max-height: $height;
+    max-width: $width;
+}
+
 // fixed-height(width: auto, height: width)
 @mixin fixed-size($height: auto, $width: $height) {
     @include fixed-height($height);

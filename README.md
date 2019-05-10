@@ -50,6 +50,8 @@ $ yarn add sassyfication
 15. [fixed-width](#fixed-widthwidth)
 16. [fixed-height](#fixed-heightheight)
 17. [fixed-size](#fixed-sizewidth-auto-height-width)
+18. [min-size](#min-sizeheight-auto-width-height)
+19. [max-size](#max-sizeheight-auto-width-height)
 
 There are also [breakpoints](#breakpoints), adapted from bootstrap.
 
@@ -336,6 +338,7 @@ Applies the same value to max, min-height and height.
     max-height: 10px;
 }
 ```
+
 #### fixed-size($height: auto, $width: $height) 
 One-liner for fixed-width and fixed-height.
 ```scss
@@ -351,6 +354,36 @@ One-liner for fixed-width and fixed-height.
     max-height: 20px;
     width: 40px;
     min-width: 40px;
+    max-width: 40px;
+}
+```
+
+#### min-size($height: auto, $width: $height) 
+One-liner for minimum size.
+```scss
+// Example
+.element {
+    @include min-size(20px, 40px);
+}
+
+// CSS Output
+.element {
+    min-height: 20px;
+    min-width: 40px;
+}
+```
+
+#### max-size($height: auto, $width: $height) 
+One-liner for maximum size.
+```scss
+// Example
+.element {
+    @include max-size(20px, 40px);
+}
+
+// CSS Output
+.element {
+    max-height: 20px;
     max-width: 40px;
 }
 ```

@@ -3,6 +3,7 @@
         "include": "./src/**/*.scss"
     },
     "rules": {
+        "force-pseudo-nesting": "off",
         "indentation": [
             4,
             {

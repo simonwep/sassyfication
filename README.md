@@ -52,6 +52,7 @@ $ yarn add sassyfication
 17. [fixed-size](#fixed-sizewidth-auto-height-width)
 18. [min-size](#min-sizeheight-auto-width-height)
 19. [max-size](#max-sizeheight-auto-width-height)
+19. [margin-between](#marginbetweenmargin)
 
 There are also [breakpoints](#breakpoints), adapted from bootstrap.
 
@@ -385,6 +386,29 @@ One-liner for maximum size.
 .element {
     max-height: 20px;
     max-width: 40px;
+}
+```
+
+#### marginBetween($margin)
+Alternative to [flex-gap](https://caniuse.com/#feat=flexbox-gap).
+```scss
+// Example
+.element {
+    @include margin-between(5px);
+}
+
+// CSS Output
+.element:not(:first-child):not(:last-child) {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.element:first-child:not(:last-child) {
+    margin-right: 5px;
+}
+
+.element:last-child:not(:first-child) {
+    margin-left: 5px;
 }
 ```
 

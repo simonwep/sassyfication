@@ -7,10 +7,10 @@
 <br>
 <p align="center">
    <a href="https://www.npmjs.com/package/sassyfication">
-       <img alt="Current version" src="https://img.shields.io/badge/version-0.1.1-536dc6.svg?style=popout-square">
+       <img alt="Current version" src="https://img.shields.io/github/tag/Simonwep/pickr.svg?color=536dc6&label=version&style=flat-square">
    </a>
    <a href="https://www.npmjs.com/package/sassyfication">
-       <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/sassyfication.svg?style=popout-square&color=C6538C">
+       <img alt="Downloads (npm)" src="https://img.shields.io/npm/dm/sassyfication.svg?style=popout-square&color=C6538C">
    </a>
    <a href="https://www.patreon.com/simonwep">
        <img alt="Support me" src="https://img.shields.io/badge/patreon-support%20me-9f53c6.svg?style=popout-square">

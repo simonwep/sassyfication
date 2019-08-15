@@ -106,8 +106,8 @@
 }
 
 // Alternative to flex-gap (see https://caniuse.com/#feat=flexbox-gap)
-// marginBetween(margin)
-@mixin margin-between($margin) {
+// margin-between-h(margin)
+@mixin margin-between-h($margin) {
     &:not(:first-child):not(:last-child) {
         margin-left: $margin;
         margin-right: $margin;
@@ -119,6 +119,22 @@
 
     &:last-child:not(:first-child) {
         margin-left: $margin;
+    }
+}
+
+// margin-between-v(margin)
+@mixin margin-between-v($margin) {
+    &:not(:first-child):not(:last-child) {
+        margin-bottom: $margin;
+        margin-top: $margin;
+    }
+
+    &:first-child:not(:last-child) {
+        margin-bottom: $margin;
+    }
+
+    &:last-child:not(:first-child) {
+        margin-top: $margin;
     }
 }
 

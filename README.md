@@ -389,12 +389,13 @@ One-liner for maximum size.
 }
 ```
 
-#### marginBetween($margin)
+#### margin-between-h($margin)
 Alternative to [flex-gap](https://caniuse.com/#feat=flexbox-gap).
+There's also `margin-between-v` as vertical version.
 ```scss
 // Example
 .element {
-    @include margin-between(5px);
+    @include margin-between-h(5px);
 }
 
 // CSS Output

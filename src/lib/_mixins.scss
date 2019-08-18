@@ -139,10 +139,10 @@
 }
 
 // Sequential animation delay based on childcount and a multiplier
-@mixin sequential-animation-delay($child-count, $multiplier) {
+@mixin sequential-animation-delay($child-count, $multiplier, $base: 0) {
     @for $i from 0 through $child-count {
         &:nth-child(#{$i}) {
-            animation-delay: #{($i - 1) * $multiplier};
+            animation-delay: #{($i - 1) * $multiplier + $base};
         }
     }
 }

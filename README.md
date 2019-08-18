@@ -42,7 +42,7 @@ $ yarn add sassyfication
 7. [inline-flex](#inline-flexflex-direction-align-items-justify-content-flex-wrap)
 8. [flex-self](#flex-selfalign-self-center-justify-self-align-self)
 9. [animate](#animateprops)
-10. [sequential-animation-delay](#sequential-animation-delaychild-count-multiplier)
+10. [sequential-animation-delay](#sequential-animation-delaychild-count-multiplier-base)
 11. [order](#orderlist)
 12. [size](#sizeheight-auto-width-height)
 13. [width](#widthwidth-min-width-max-width)
@@ -219,25 +219,25 @@ Props are used for the animation property, @content as keyframes. Generates a ra
 }
 ```
 
-#### sequential-animation-delay($child-count, $multiplier) 
+#### sequential-animation-delay($child-count, $multiplier, $base) 
 Useful to animate a specific amount of childrens successive.
 ```scss
 // Example
 .element {
-    @include sequential-animation-delay(3, 200ms);
+    @include sequential-animation-delay(3, 200ms, 1000ms);
 }
 
 // CSS Output
 .element:nth-child(0) {
-   animation-delay: 0ms;
+   animation-delay: 1000ms;
 }
 
 .element:nth-child(1) {
-   animation-delay: 200ms;
+   animation-delay: 1200ms;
 }
 
 .element:nth-child(2) {
-   animation-delay: 400ms;
+   animation-delay: 1400ms;
 }
 ```
 

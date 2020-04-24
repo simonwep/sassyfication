@@ -44,14 +44,14 @@ $ yarn add sassyfication
 9. [animate](#animateprops)
 10. [sequential-animation-delay](#sequential-animation-delaychild-count-multiplier-base)
 11. [order](#orderlist)
-12. [size](#sizeheight-auto-width-height)
+12. [size](#sizewidth-auto-height-width)
 13. [width](#widthwidth-min-width-max-width)
 14. [height](#heightheight-min-height-max-height)
 15. [fixed-width](#fixed-widthwidth)
 16. [fixed-height](#fixed-heightheight)
-17. [fixed-size](#fixed-sizeheight-auto-width-height)
-18. [min-size](#min-sizeheight-auto-width-height)
-19. [max-size](#max-sizeheight-auto-width-height)
+17. [fixed-size](#fixed-sizewidth-auto-height-width)
+18. [min-size](#min-sizewidth-auto-height-width)
+19. [max-size](#max-sizewidth-auto-height-width)
 19. [margin-between-\[v|h\]](#margin-between-hmargin)
 
 There are also [breakpoints](#breakpoints), adapted from bootstrap.

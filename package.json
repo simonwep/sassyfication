@@ -1,6 +1,6 @@
 {
     "name": "sassyfication",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "license": "MIT",
     "author": "Simon Reinisch <toports@gmx.de>",
     "description": "Library with sass mixins to speed up your css workflow",

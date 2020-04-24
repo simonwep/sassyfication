@@ -1,27 +1,31 @@
+/**
+ * Source: https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
+ */
+
 // Small devices (landscape phones, 576px and up)
 @mixin mq-phones {
     @media (max-width: 576px) {
-        @content
+        @content;
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @mixin mq-tablets {
     @media (max-width: 768px) {
-        @content
+        @content;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @mixin mq-desktop {
     @media (max-width: 992px) {
-        @content
+        @content;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @mixin mq-large-desktop {
     @media (max-width: 1200px) {
-        @content
+        @content;
     }
 }

@@ -18,10 +18,11 @@
         "url": "https://github.com/Simonwep/sassyfication.git"
     },
     "scripts": {
-        "lint": "sass-lint -v"
+        "lint": "stylelint src/**/*.scss",
+        "lint:fix": "stylelint src/**/*.scss --fix"
     },
-    "dependencies": {},
     "devDependencies": {
-        "sass-lint": "^1.13.1"
+        "stylelint-config-sass-guidelines": "^7.0.0",
+        "stylelint": "^13.3.3"
     }
 }

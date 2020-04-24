@@ -265,7 +265,7 @@ Receives a list with selectors and order-index for flex elements. Accepts a list
 ```
 
 // Width and height
-#### size($height: auto, $width: $height) 
+#### size($width: auto, $height: $width)
 One-liner for width and height.
 ```scss
 // Example
@@ -275,8 +275,8 @@ One-liner for width and height.
 
 // CSS Output
 .element {
-    height: 20px;
-    width: 30px;
+    height: 30px;
+    width: 20px;
 }
 ```
 #### width($width, $min-width, $max-width) 
@@ -340,7 +340,7 @@ Applies the same value to max, min-height and height.
 }
 ```
 
-#### fixed-size($height: auto, $width: $height) 
+#### fixed-size($width: auto, $height: $width)
 One-liner for fixed-width and fixed-height.
 ```scss
 // Example
@@ -350,16 +350,14 @@ One-liner for fixed-width and fixed-height.
 
 // CSS Output
 .element {
-    height: 20px;
-    min-height: 20px;
-    max-height: 20px;
-    width: 40px;
-    min-width: 40px;
-    max-width: 40px;
+    min-width: 20px;
+    min-width: 20px;
+    min-height: 40px;
+    max-height: 40px;
 }
 ```
 
-#### min-size($height: auto, $width: $height) 
+#### min-size($width: auto, $height: $width)
 One-liner for minimum size.
 ```scss
 // Example
@@ -369,12 +367,12 @@ One-liner for minimum size.
 
 // CSS Output
 .element {
-    min-height: 20px;
-    min-width: 40px;
+    min-width: 20px;
+    min-height: 40px;
 }
 ```
 
-#### max-size($height: auto, $width: $height) 
+#### max-size($width: auto, $height: $width)
 One-liner for maximum size.
 ```scss
 // Example
@@ -384,8 +382,8 @@ One-liner for maximum size.
 
 // CSS Output
 .element {
-    max-height: 20px;
-    max-width: 40px;
+    max-width: 20px;
+    max-height: 40px;
 }
 ```
 

@@ -20,7 +20,7 @@
 
 // fixed-width(width)
 @mixin fixed-width($base) {
-    @include width($base, $base, $base);
+    @include apply-props($base, min-width, max-width);
 }
 
 // height(height, min-height, max-height)
@@ -30,7 +30,7 @@
 
 // fixed-height(height)
 @mixin fixed-height($base) {
-    @include height($base, $base, $base);
+    @include apply-props($base, min-height, max-height);
 }
 
 // size(width: auto, height: width)

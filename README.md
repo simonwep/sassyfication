@@ -310,7 +310,7 @@ One-liner for max-, min- height (and height).
 }
 ```
 #### fixed-width($width) 
-Applies the same value to max, min-width and width.
+Applies the same value to max- and min-width.
 ```scss
 // Example
 .element {
@@ -319,13 +319,12 @@ Applies the same value to max, min-width and width.
 
 // CSS Output
 .element {
-    width: 10px;
     min-width: 10px;
     max-width: 10px;
 }
 ```
 #### fixed-height($height) 
-Applies the same value to max, min-height and height.
+Applies the same value to max- and min-height.
 ```scss
 // Example
 .element {
@@ -334,7 +333,6 @@ Applies the same value to max, min-height and height.
 
 // CSS Output
 .element {
-    height: 10px;
     min-height: 10px;
     max-height: 10px;
 }

@@ -349,7 +349,7 @@ One-liner for fixed-width and fixed-height.
 // CSS Output
 .element {
     min-width: 20px;
-    min-width: 20px;
+    max-width: 20px;
     min-height: 40px;
     max-height: 40px;
 }

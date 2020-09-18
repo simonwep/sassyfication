@@ -22,7 +22,7 @@
         "lint:fix": "stylelint src/**/*.scss --fix"
     },
     "devDependencies": {
-        "stylelint-config-sass-guidelines": "^7.0.0",
-        "stylelint": "^13.3.3"
+        "stylelint-config-sass-guidelines": "^7.1.0",
+        "stylelint": "^13.7.1"
     }
 }

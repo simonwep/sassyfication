@@ -58,7 +58,7 @@
 }
 
 // pseudo(position: absolute, content: '')
-@mixin pseudo($position: absolute, $content: '', $position...) {
+@mixin pseudo($position: absolute, $content: '') {
     @include apply-props(($position, $content), position, content);
 }
 
